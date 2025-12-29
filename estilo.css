@@ -23,7 +23,7 @@
         HEADER / HERO
        ========================= */
         header {
-            background-image: url('imagens/fundo.jpg');
+            background-image: url('fundo.jpg');
             /* troque pelo fundo roxo */
             background-size: cover;
             background-position: center;
