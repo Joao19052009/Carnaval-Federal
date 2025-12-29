@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carnaval Federal 2026</title>
+
+    <style>
+        /* =========================
+       RESET + BASE (Mobile First)
+       ========================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(180deg, #5b1fa6, #7b2bd4);
+            color: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+       HEADER / HERO
+       ========================= */
+        header {
+            background-image: url('fundo-carnaval.jpg');
+            /* troque pelo fundo roxo */
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+
+        header img {
+            width: 220px;
+            max-width: 90%;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .cta-principal {
+            margin-top: 25px;
+            display: inline-block;
+            background: #ffd400;
+            color: #3b146a;
+            padding: 14px 26px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* =========================
+       SEÇÕES
+       ========================= */
+        section {
+            padding: 40px 20px;
+        }
+
+        .titulo-secao {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+        }
+
+        /* =========================
+       PRODUTOS
+       ========================= */
+        .produtos {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card-produto {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-produto h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .img-produto {
+            width: 100%;
+            max-width: 160px;
+            border-radius: 15px;
+            margin-bottom: 5px;
+        }
+
+        .descricao {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .preco {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #ffd400;
+            font-weight: bold;
+        }
+
+        .btn-comprar {
+            background: #ff2f92;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+
+        /* =========================
+       INFO EVENTO
+       ========================= */
+        .info {
+            text-align: center;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        /* =========================
+       FOOTER
+       ========================= */
+        footer {
+            background: rgba(0, 0, 0, 0.35);
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 0.85rem;
+        }
+
+        /* =========================
+       RESPONSIVO (Desktop)
+       ========================= */
+        @media (min-width: 768px) {
+            header h1 {
+                font-size: 2.4rem;
+            }
+
+            .produtos {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .card-produto {
+                width: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <header>
+        <!-- coloque aqui a logo oficial -->
+        <img src="logo.png" alt="Carnaval Federal 2026" />
+        <h1>Carnaval Federal 2026</h1>
+        <p>Evento privado • Experiência completa • Não é bloco de rua</p>
+        <a href="#vendas" class="cta-principal">Comprar agora</a>
+    </header>
+
+    <!-- PRODUTOS -->
+    <section id="vendas">
+        <h2 class="titulo-secao">Ingressos & Produtos</h2>
+
+        <div class="produtos">
+            <div class="card-produto">
+                <img src="ABADÁCM.jpg" alt="Produto" class="img-produto" />
+                <h3>ABADÁ COM MANGA</h3>
+                <p class="descricao">Abadá personalizado com mangas.</p>
+                <p class="preco">R$ 28.00 </p>
+                <button class="btn-comprar" onclick="comprar('ABADÁ COM MANGA')">Comprar</button>
+            </div>
+
+            <div class="card-produto">
+                <img src="ABADÁSM.jpg" alt="Produto" class="img-produto" />
+                <h3>ABADÁ SEM MANGA</h3>
+                <p class="descricao">Abadá personalizado sem mangas.</p>
+                <p class="preco">R$ 22.00 </p>
+                <button class="btn-comprar" onclick="comprar('ABADÁ SEM MANGA')">Comprar</button>
+            </div>
+
+            <div class="card-produto">
+                <img src="COPO.png" alt="Produto" class="img-produto" />
+                <h3>COPO</h3>
+                <p class="descricao">Copo personalizado.</p>
+                <p class="preco">R$ 12.00 </p>
+                <button class="btn-comprar" onclick="comprar('COPO')">Comprar</button>
+            </div>
+
+            <div class="card-produto">
+                <img src="INGRESSO.png" alt="Produto" class="img-produto" />
+                <h3>INGRESSO</h3>
+                <p class="descricao">Ingresso que garante a entrada no evento.</p>
+                <p class="preco">R$ 10.00 </p>
+                <button class="btn-comprar" onclick="comprar('__NOME__')">Comprar</button>
+            </div>
+
+        <h2 class="titulo-secao">KITS PROMOCIONAIS</h2>
+
+            <div class="card-produto">
+                <img src="kit1.png" alt="Produto" class="img-produto" />
+                <h3>KIT 1 (COMPLETO)</h3>
+                <p class="descricao">ABADÁ COM MANGA + COPO + INGRESSO</p>
+                <p class="preco">R$ 40.00 </p>
+                <button class="btn-comprar" onclick="comprar('KIT 1 (COMPLETO)')">Comprar</button>
+            </div>
+
+            <div class="card-produto">
+                <img src="kit1.1.png" alt="Produto" class="img-produto" />
+                <h3>KIT 1.1 (COMPLETO)</h3>
+                <p class="descricao">ABADÁ SEM MANGA + COPO + INGRESSO</p>
+                <p class="preco">R$ 35.OO </p>
+                <button class="btn-comprar" onclick="comprar('__NOME__')">Comprar</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INFO EVENTO -->
+    <section>
+        <h2 class="titulo-secao">Sobre o Evento</h2>
+        <div class="info">
+            <p>O Carnaval Federal é um evento privado, com estrutura, segurança e atrações definidas.</p>
+            <p>Não é carnaval de rua. É experiência.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© Carnaval Federal 2026</p>
+        <p>Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function comprar(produto) {
+            const numeroWhatsApp = '5588981170417'; // troque pelo número oficial
+            const mensagem = `Olá! Quero comprar: ${produto} - Carnaval Federal 2026 🎭`;
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+
+</html>
